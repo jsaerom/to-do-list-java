@@ -1,8 +1,20 @@
 <h1>$category.getName() tasks:</h1>
 
+<h3>Active tasks:</h3>
 <ul>
   #foreach($task in $category.getTasks())
-   <li>$task.getDescription()</li>
+    #if(!$task.isCompleted())
+      <li><a href="/categories/$category.getId()/tasks/$task.getId()">$task.getDescription()</a></li>
+    #end
+  #end
+</ul>
+
+<h3>Completed tasks:</h3>
+<ul>
+  #foreach($task in $category.getTasks())
+    #if($task.isCompleted())
+      <li><a href="/categories/$category.getId()/tasks/$task.getId()">$task.getDescription()</a></li>
+    #end
   #end
 </ul>
 
