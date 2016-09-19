@@ -1,0 +1,6 @@
+<h1>Are you sure you want to delete $category.getName()?</h1>
+<form action="/categorydelete" method="post">
+  <input id="categoryId" name="categoryId" type="hidden" value="$category.getId()">
+  <button type="submit" class="btn btn-danger">Delete</button>
+  <a href="/categories/$category.getId()"><button type="button" class="btn btn-primary">Go back</button></a>
+</form>

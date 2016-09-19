@@ -1,4 +1,4 @@
-<h1>$category.getName() tasks:</h1>
+<h1>$category.getName() tasks: <a href="/categories/$category.getId()/edit"><span class="glyphicon glyphicon-pencil"></span></a></h1>
 
 <h3>Active tasks:</h3>
 <ul>
@@ -18,5 +18,5 @@
   #end
 </ul>
 
-<a href="/categories/$category.getId()/tasks/new">Add a new task</a>
-<a href="/categories">All categories</a>
+<a href="/categories/$category.getId()/tasks/new"><button type="button" class="btn btn-success">Add a new task</button></a>
+<a href="/categories"><button type="button" class="btn btn-primary">Go back</button></a>

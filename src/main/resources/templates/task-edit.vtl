@@ -1,0 +1,20 @@
+<h1>Edit $task.getDescription()</h1>
+
+<form action="/taskcomplete" method="post">
+  <div class="form-group">
+    <input id="categoryId" name="categoryId" type="hidden" value="$category.getId()">
+    <input id="taskId" name="taskId" type="hidden" value="$task.getId()">
+    <input id="taskDescription" name="taskDescription" type="text" value="$task.getDescription()" class="form-control">
+    <div class="checkbox">
+      <label>
+      #if($task.isCompleted())
+        <input type="checkbox" id="taskCompleted" name="taskCompleted" checked>Mark complete
+      #else
+        <input type="checkbox" id="taskCompleted" name="taskCompleted">Mark complete
+      #end
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success">Update task</button>
+  <a href="/categories/$category.getId()"><button  type="button" class="btn btn-primary">Go back</button></a>
+</form>

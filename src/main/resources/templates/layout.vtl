@@ -3,8 +3,18 @@
   <head>
     <title>To Do List</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='/app.css'>
+    <link rel='stylesheet' href='$css'>
   </head>
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <ul class="nav navbar-nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/categories">Categories</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       #parse( $template )
     </div>
