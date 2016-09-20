@@ -46,7 +46,7 @@ public class App {
 
     get("categories/:id/delete", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      Category category = Category.find(Integer.parseInt(request.params(":d")));
+      Category category = Category.find(Integer.parseInt(request.params(":id")));
       model.put("category", category);
       model.put("template", "templates/category-delete.vtl");
       return new ModelAndView(model, layout);
